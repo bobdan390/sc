@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <title>SC</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+  </head>
+  <body>
+    <div class="menu">
+      <div class="block">
+        <table style="width: 100%;">
+          <tr>
+            <td>
+              <p style="margin-top:0px"><button id="startCameraBelowButton" onclick="startCameraBelow();">Start</button></p>
+            </td>
+            <td>
+              <p style="margin-bottom:0px">
+          <select id="selectColorEffect" onchange="changeColorEffect();">
+            <option selected value="none">Effect</option>
+            <!--<option value="aqua">aqua</option>
+            <option value="blackboard">blackboard</option>-->
+            <option value="mono">mono</option>
+            <option value="negative">negative</option>
+            <!--<option value="posterize">posterize</option>-->
+            <option value="sepia">sepia</option>
+            <!--<option value="solarize">solarize</option>
+            <option value="whiteboard">whiteboard</option>-->
+          </select>
+        </p>
+            </td>
+
+            <td>
+        <p style="margin-bottom:0px;">
+          <select id="selectFlashMode" onchange="changeFlashMode();">
+            <option selected value="off">Flash off</option>
+            <option value="on">Flash on</option>
+            <option value="auto">Flash auto</option>
+            <option value="torch">Flash torch</option>
+          </select>
+        </p>
+            </td>
+
+
+          </tr>
+
+          <tr>
+            <td colspan="3">
+        <div id="androidOnly">
+          <p style="margin-bottom:0px;">
+            Zoom:
+            <span id="zoomValue">1</span>
+            <input type="range" id="zoomSlider" min="1" max="5" value="1" onchange="changeZoom();" />
+          </p>
+        </div>
+            </td>
+          </tr>
+
+          <tr>
+            
+
+            <td>
+              <button id="takePictureButton" onclick="takePicture();">Take</button>
+            </td>
+
+            <td>
+             
+            </td>
+
+            <td>
+              <button id="saveButton" onclick="sendPicture();">Save</button>
+            </td>
+          </tr>
+        </table>
+        
+      </div>
+        
+    </div>
+
+    <div class="pictures" style="text-align: center;">
+      <p><img id="originalPicture" style="width: 50%; margin: auto;" src="" path="" /></p>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="CameraPreview.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+body, html{
+  height:100%;
+}
+.block{
+  padding:.25rem 0;
+  margin:.25rem 0;
+  background: #008aff;
+  border:1px solid #111;
+  border-radius: 3px;
+}
+button{
+  background: gray:
+  color:#333;
+  border-radius: 3px;
+  border:1px solid #ccc;
+  margin:.25rem;
+}
+
+td{
+    text-align: center;
+}
+.menu{
+    position: absolute;
+    bottom: 0px;
+}
